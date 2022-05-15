@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import NavBar from "../../styles/Global/NavBar";
 
 export default function Menu() {
   const categories = [
@@ -9,7 +10,7 @@ export default function Menu() {
     { text: "Talk-in-Code", href: "talk-in-code" },
   ];
   return (
-    <nav>
+    <NavBar>
       <div>
         <Image
           src={"/images/logo.png"}
@@ -32,6 +33,6 @@ export default function Menu() {
           <Link href={"/about"}>Sobre</Link>
         </li>
       </ul>
-    </nav>
+    </NavBar>
   );
 }

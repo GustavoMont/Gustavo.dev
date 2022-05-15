@@ -1,5 +1,6 @@
 import React from "react";
+import FooterBar from "../../styles/Global/FooterBar";
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return <FooterBar>Footer</FooterBar>;
 }
