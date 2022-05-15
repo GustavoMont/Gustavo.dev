@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
+import getAllPosts from "../../functions/getAllPosts";
 
 interface Post {
   title: string;
