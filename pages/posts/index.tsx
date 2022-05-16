@@ -1,20 +1,16 @@
 import React from "react";
 import getAllPosts from "../../functions/getAllPosts";
-import { CategoryPosts } from "../../models/Posts";
+import Post, { CategoryPosts } from "../../models/Posts";
 
-interface PostsProps {
-  posts: CategoryPosts[];
-}
-
-export default function Posts({ posts }: PostsProps) {
+export default function Posts({ posts }: any) {
   return (
     <div>
-      {posts.map((post, index) => (
+      {posts.map((post: Post, index: number) => (
         <div key={index}>
-          <>
-            {post.category}
-            {post.posts[0].metadata?.author}
-          </>
+          <h2>{post.metadata.title}</h2>
+          <p>
+            {post.metadata.category.toUpperCase()} - {post.metadata.author}
+          </p>
         </div>
       ))}
     </div>
