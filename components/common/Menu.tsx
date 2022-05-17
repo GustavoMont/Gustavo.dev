@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import NavBar from "../../styles/Global/NavBar";
+import SpecialLink from "../../styles/Global/SpecialLink";
 
 export default function Menu() {
   const categories = [
@@ -22,19 +23,25 @@ export default function Menu() {
       </div>
       <ul>
         <li>
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"}>
+            <SpecialLink>Home</SpecialLink>
+          </Link>
         </li>
         {categories.map(({ text, href }, index) => (
           <li key={index}>
-            <Link href={`/categories/${href}`}>{text}</Link>
+            <Link href={`/categories/${href}`}>
+              <SpecialLink>{text}</SpecialLink>
+            </Link>
           </li>
         ))}
         <li>
-          <Link href={"/posts"}>Posts</Link>
+          <Link href={"/posts"}>
+            <SpecialLink>Posts</SpecialLink>
+          </Link>
         </li>
-        <li>
-          <Link href={"/about"}>Sobre</Link>
-        </li>
+        {/* <li>
+          <SpecialLink href={"/about"}>Sobre</SpecialLink>
+        </li> */}
       </ul>
     </NavBar>
   );

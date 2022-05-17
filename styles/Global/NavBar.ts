@@ -4,7 +4,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   background: #080808;
-  padding: 1rem;
+  padding: 1rem 2rem;
   color: #fff;
   * {
     display: flex;
