@@ -7,7 +7,6 @@ import GlobalStyle from "../styles/Global";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle />
       <Head>
         <link
           rel="shortcut icon"
@@ -15,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           type="image/x-icon"
         />
       </Head>
+      <GlobalStyle />
       <Menu />
       <Component {...pageProps} />
       <Footer />
