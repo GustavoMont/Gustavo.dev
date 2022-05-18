@@ -6,9 +6,9 @@ interface CardProps {
 
 const Card = styled.div<CardProps>`
   background-color: #fff;
-  width: 45%;
+  width: 30%;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1rem 2rem;
   padding-bottom: 2rem;
   margin-bottom: 1.8rem;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
@@ -48,22 +48,28 @@ const Card = styled.div<CardProps>`
     }
     .image-container {
       img {
-        transform: scale(1);
+        transform: scale(1.2);
+        filter: grayscale(0%);
       }
     }
   }
   cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
   .image-container {
+    overflow: hidden;
+
     display: flex;
     align-items: center;
+    align-items: flex-start;
     width: 100%;
-    height: 280px;
+    height: 190px;
     margin-bottom: 2rem;
+    border-radius: 0.8rem;
     img {
       width: 100%;
-      border-radius: 0.8rem;
-      transform: scale(0.95);
+      border-radius: inherit;
+      transform: scale(1);
       transition: 0.6s all ease;
+      filter: grayscale(40%) blur(1px);
     }
   }
   h2 {
