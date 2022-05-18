@@ -24,7 +24,8 @@ export default function Posts({ posts }: any) {
               <img src={post.metadata.banner} alt="A" />
             </div>
             <h2>{post.metadata.title}</h2>
-            <p>
+            <p className="abstract">{post.metadata.abstract}</p>
+            <p className="my-infos">
               {post.metadata.category.toUpperCase()} - {post.metadata.author}
             </p>
           </Card>

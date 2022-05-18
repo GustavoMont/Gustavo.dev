@@ -12,21 +12,18 @@ export default function Menu() {
   ];
   return (
     <NavBar>
-      <div>
-        <Image
-          src={"/images/logo.png"}
-          alt="Menino Mexendo no Computador"
-          width={40}
-          height={40}
-        />
-        <h1>GUSTAVO.DEV</h1>
-      </div>
+      <Link href={"/"}>
+        <div>
+          <Image
+            src={"/images/logo.png"}
+            alt="Menino Mexendo no Computador"
+            width={40}
+            height={40}
+          />
+          <h1>GUSTAVO.DEV</h1>
+        </div>
+      </Link>
       <ul>
-        <li>
-          <Link href={"/"}>
-            <SpecialLink>Home</SpecialLink>
-          </Link>
-        </li>
         {categories.map(({ text, href }, index) => (
           <li key={index}>
             <Link href={`/categories/${href}`}>
