@@ -1,5 +1,6 @@
 ---
 title: Construindo um App
+slug: construindo-um-app
 date: "2022-05-15"
 author: GustavoMont
 abstract: Como construir um App usando React Native

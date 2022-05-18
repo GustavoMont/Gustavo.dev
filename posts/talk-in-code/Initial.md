@@ -1,5 +1,6 @@
 ---
 title: Olá mundo
+slug: ola-mundo
 date: "2022-05-15"
 author: GustavoMont
 abstract: Meu primeiro post

@@ -1,5 +1,6 @@
 ---
 title: test
+slug: test
 date: "2022-05-15"
 author: GustavoMont
 abstract: Testando várias coisas

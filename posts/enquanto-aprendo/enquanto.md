@@ -1,5 +1,6 @@
 ---
 title: Aprendendo Wordpress
+slug: aprendendo-wordpress
 date: "2022-05-15"
 author: GustavoMont
 abstract: Aprendendo o CMS mais utilizado do mundo

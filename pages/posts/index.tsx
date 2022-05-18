@@ -19,7 +19,9 @@ export default function Posts({ posts }: any) {
           <Card
             key={index}
             clickable
-            onClick={() => router.push(`posts/${index.toString()}`)}>
+            onClick={() =>
+              router.push(`posts/${post.metadata.slug.toString()}`)
+            }>
             <div className="image-container">
               <img src={post.metadata.banner} alt="A" />
             </div>
