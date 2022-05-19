@@ -27,6 +27,15 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
         text-decoration: none;
         cursor: pointer;
+        text-decoration: underline;
+        font-style: italic;
+        color: var(--pink);
+        opacity: 1;
+        :hover{
+        opacity: .8;
+
+        }
+        transition: .1s all ease;
     }
     
 `;

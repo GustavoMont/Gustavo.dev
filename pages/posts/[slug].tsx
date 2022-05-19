@@ -1,23 +1,52 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import getAllPosts from "../../functions/getAllPosts";
 import getPost from "../../functions/getPost";
-import Layout from "../../styles/Global/Layout";
+import Post from "../../models/Posts";
+import Divider from "../../styles/Global/Divider";
+import LayoutPost from "../../styles/Posts/LayoutPost";
+import H1 from "../../styles/Typography/H1";
 import H2 from "../../styles/Typography/H2";
+import P from "../../styles/Typography/P";
 
-export default function Post(props: any) {
-  console.log(props.post);
+interface PostPageProps {
+  post: Post;
+}
 
+export default function PostPage({ post }: PostPageProps) {
   return (
-    <Layout>
-      <div>
-        <img src={props.post.metadata.banner} alt="AAAAAAAAAA" />
-      </div>
-      <H2>{props.post.metadata.title}</H2>
-      <ReactMarkdown linkTarget={"_blank"}>{props.post.content}</ReactMarkdown>
-    </Layout>
+    <>
+      <LayoutPost imageUrl={post.metadata.banner}>
+        <div className="banner">
+          <div className="overlay" />
+        </div>
+        <main>
+          <header>
+            <H1>{post.metadata.title}</H1>
+            <div>
+              <p>{post.metadata.category}</p>
+              <div className="dot"></div>
+              <p>{new Date(post.metadata.date).toLocaleDateString()}</p>
+            </div>
+            <Divider color="secondary-pink" />
+          </header>
+          <ReactMarkdown
+            linkTarget={"_blank"}
+            components={{
+              hr: ({ node, ...props }) => <Divider {...props} />,
+              h2: ({ node, ...props }) => (
+                <H2 {...props} color="light-purple" />
+              ),
+              p: ({ node, ...props }) => <P {...props} />,
+            }}>
+            {post.content}
+          </ReactMarkdown>
+        </main>
+      </LayoutPost>
+    </>
   );
 }
 
