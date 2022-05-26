@@ -41,7 +41,8 @@ export default function PostPage({ post }: PostPageProps) {
                 <H2 {...props} color="light-purple" />
               ),
               p: ({ node, ...props }) => <P {...props} />,
-            }}>
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </main>
@@ -63,7 +64,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
   const post = getPost(context.params.slug);
-  console.log(post);
 
   return {
     props: {

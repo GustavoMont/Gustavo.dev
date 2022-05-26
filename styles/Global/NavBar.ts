@@ -11,6 +11,11 @@ const NavBar = styled.nav`
   }
   div {
     align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    &:hover {
+      color: var(--pink);
+    }
   }
   ul {
     list-style: none;

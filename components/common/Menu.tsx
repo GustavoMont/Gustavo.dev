@@ -14,12 +14,6 @@ export default function Menu() {
     <NavBar>
       <Link href={"/"}>
         <div>
-          <Image
-            src={"/images/logo.png"}
-            alt="Menino Mexendo no Computador"
-            width={40}
-            height={40}
-          />
           <h1>GUSTAVO.DEV</h1>
         </div>
       </Link>

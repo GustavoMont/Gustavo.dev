@@ -13,35 +13,7 @@ export default function Posts({ posts }: any) {
   const router = useRouter();
   return (
     <Layout>
-      <H2 color={"secondary-pink"}>Todos os Posts</H2>
-      <CardContainer>
-        {posts.map((post: Post, index: number) => (
-          <Card
-            key={index}
-            clickable
-            onClick={() =>
-              router.push(`posts/${post.metadata.slug.toString()}`)
-            }>
-            <div className="image-container">
-              <img src={post.metadata.banner} alt="A" />
-            </div>
-            <h2>{post.metadata.title}</h2>
-            <p className="abstract">{post.metadata.abstract}</p>
-            <p className="my-infos">
-              {post.metadata.category.toUpperCase()} - {post.metadata.author}
-            </p>
-          </Card>
-        ))}
-      </CardContainer>
+      <h1>A</h1>
     </Layout>
   );
-}
-
-export async function getStaticProps(context: any) {
-  const posts = getAllPosts();
-  return {
-    props: {
-      posts,
-    },
-  };
 }
